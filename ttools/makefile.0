@@ -1,0 +1,32 @@
+## Compiler, tools and options
+
+OBJS  	= AqDS.o
+TARGET 	= AqDS
+
+#CC 	= gfortran
+CC 	= g77
+CFLAGS 	= -O3 -march=i686 -fomit-frame-pointer -malign-double -funroll-loops -Wall
+INCDIRS = -I/usr/local/pgplot
+LIBDIRS = -L/usr/local/pgplot -L/usr/X11R6/lib
+LIBS 	= -lcpgplot -lpgplot -lm -lX11
+
+## Implicit rules
+
+.SUFFIXES: .c .o
+
+## Build rules
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CC) $(OBJS) -o $(TARGET) $(CFLAGS) $(LIBDIRS) $(LIBS)
+
+## Compile
+
+.c.o: $*.c
+	$(CC) -c $*.c $(CFLAGS) $(INCDIRS)
+
+## Clean
+
+clean:
+	rm -f $(OBJS) $(TARGET)
