@@ -2,6 +2,7 @@
 *.pdf
 *.png
 *.BAK
+*.bk
 *.exe
 *.o
 *.htm
@@ -13,6 +14,13 @@
 *.res
 *.idb
 *.suo
+*.exe.*
+*.ilk
+*.doc
+*.user
+*.XML
+*.ini
+*.zip
 bak
 *.bit
 *.mak
@@ -24,5 +32,9 @@ bak
 AnFFT2GSsCtrlDlg.*
 AqDrv4.*
 vc*.*
+*.H
 Release
 _UpgradeReport_Files
+ncb
+qqq
+*.swp

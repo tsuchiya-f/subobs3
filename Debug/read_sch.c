@@ -41,8 +41,8 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR pCmdLine, int sho
 		day = now->tm_mday;
 	
 //  スケジュールファイルのパスを作成
-//		sprintf(file,"Z:\\sch\\SUN_%d%02d%02d.sch",year,mon,day);
-		sprintf(file,"Y:\\sched_latest\\SUN_%d%02d%02d.sch",year,mon,day);
+		sprintf(file,"Z:\\sch\\SUN_%d%02d%02d.sch",year,mon,day);
+//		sprintf(file,"Y:\\sched_latest\\SUN_%d%02d%02d.sch",year,mon,day);
 		sprintf(copy,"SUN_%d%02d%02d.sch",year,mon,day);
 		printf("%s\n",file);
 //  スケジュールファイルを読み込む
